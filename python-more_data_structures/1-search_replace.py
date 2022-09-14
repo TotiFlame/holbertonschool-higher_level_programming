@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-from xml.dom.minidom import Element
-
-
 def search_replace(my_list, search, replace):
     new_list = my_list.copy()
     for i, elem in enumerate(new_list):
