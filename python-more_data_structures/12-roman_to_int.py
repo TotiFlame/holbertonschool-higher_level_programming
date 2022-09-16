@@ -2,9 +2,10 @@
 def roman_to_int(roman_string):
     res = 0
     char = 0
+    if roman_string is None:
+        return 0
     if type(roman_string) == int:
         return 0
-    
     while char < len(roman_string):
         first_num = sum(roman_string[char])
         if (char + 1) < len(roman_string):
