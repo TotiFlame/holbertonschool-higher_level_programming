@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ module """
+
+
 def matrix_divided(matrix, div):
     """ matrix_divided """
     new_matrix = []
@@ -11,11 +13,11 @@ def matrix_divided(matrix, div):
     for idx, row in enumerate(matrix):
         if len(row) != length:
             raise TypeError("Each row of the matrix "
-                                "must have the same size")
+                            "must have the same size")
         new_matrix.append([])
         for j in row:
             if type(j) != int and type(j) != float:
-                raise TypeError("matrix must be a matrix"
+                raise TypeError("matrix must be a matrix "
                                 "(list of lists) of integers/floats")
             new_matrix[idx].append(round(j / div, 2))
     return new_matrix
