@@ -2,7 +2,6 @@ The 0-add_integer module
 ========================
 
 >>> add_integer = __import__('0-add_integer').add_integer
-________________________
 
 >>> add_integer(2)
 100
