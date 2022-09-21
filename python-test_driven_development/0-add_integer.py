@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+""" module """
+
+
 def add_integer(a, b=98):
+    """ add_integer"""
     if type(a) == float:
         a = int(a)
     if type(b) == float:
