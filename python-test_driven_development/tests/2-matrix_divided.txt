@@ -1,4 +1,4 @@
-The 2-matrix_divided.py module
+The 2-matrix_divided module
 ==============================
 
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
@@ -7,17 +7,17 @@ The 2-matrix_divided.py module
 Traceback (most recent call last):
 TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
 
->>> matrix_divided(matrix, -1)
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], -1)
 [[-1.0, -2.0, -3.0], [-4.0, -5.0, -6.0]]
 
 >>> matrix_divided(50.2)
 Traceback (most recent call last):
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
->>> matrix_divided(matrix, 50)
+>>> matrix_divided([], 50)
 Traceback (most recent call last):
 IndexError: list index out of range
 
->>> matrix_divided(matrix)
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]])
 Traceback (most recent call last):
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
