@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+""" module """
 def matrix_divided(matrix, div):
+    """ matrix_divided """
     new_matrix = []
     if type(div) != int and type(div) != float:
         raise TypeError("div must be a number")
