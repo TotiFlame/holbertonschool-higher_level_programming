@@ -44,6 +44,8 @@ class Rectangle:
 
     def __str__(self):
         ret_str = ""
+        if self.__height == 0 or self.__width == 0:
+            return ret_str
         for i in range(self.__height):
             if i != 0:
                 ret_str += '\n'
