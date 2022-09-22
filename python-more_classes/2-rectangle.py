@@ -2,9 +2,6 @@
 """ module """
 
 
-from string import hexdigits
-
-
 class Rectangle:
     """ Rectangle """
 
