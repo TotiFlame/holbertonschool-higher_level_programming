@@ -1,17 +1,19 @@
-The 5-text_identation module
+The 5-text_indentation module
 ============================
 
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 >>> text_indentation("HOLA SOY TOTI")
-HOLA SOY TOTI>>>
+HOLA SOY TOTI
 
 >>> text_indentation(12)
 Traceback (most recent call last):
 TypeError: text must be a string
 
->>> text_indentation("dsadsa"123)
-SyntaxError: invalid syntax
+>>> text_indentation("Holberton.School")
+Holberton.
+<BLANKLINE>
+School
 
 >>> text_indentation()
 Traceback (most recent call last):
