@@ -28,6 +28,6 @@ class Rectangle:
     def height(self):
         return self.__height
 
-    @width.setter
+    @height.setter
     def height(self, value):
         self.__height = value
