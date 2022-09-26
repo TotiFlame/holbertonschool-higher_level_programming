@@ -3,18 +3,27 @@ The "1-my_list" module
 
 MyList = __import__('1-my_list').MyList
 
->>> my_list = MyList()
->>> my_list.append(1)
->>> my_list.append(4)
->>> my_list.append(2)
->>> my_list.append(3)
->>> my_list.append(5)
->>> my_list.print_sorted()
+>>> lista = MyList()
+>>> lista.append(1)
+>>> lista.append(4)
+>>> lista.append(2)
+>>> lista.append(3)
+>>> lista.append(5)
+>>> lista.print_sorted()
 [1, 2, 3, 4, 5]
-[1, 4, 2, 3, 5]
 
->>> my_list.append("string")
->>> my_list.print_sorted()
-['string']
-['string']
+>>> lista = MyList()
+>>> lista.append(10)
+>>> lista.append(2)
+>>> lista.append(-1)
+>>> lista.print_sorted()
+[-1, 2, 10]
 
+>>> lista = MyList()
+>>> lista.print_sorted()
+[]
+
+>>> lista = MyList()
+>>> lista.append(1)
+>>> lista.print_sorted()
+[1]
