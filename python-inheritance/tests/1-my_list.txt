@@ -27,3 +27,11 @@ The "1-my_list" module
 >>> lista.append(1)
 >>> lista.print_sorted()
 [1]
+
+>>> lista = MyList()
+>>> lista.append(-10)
+>>> lista.append(-20)
+>>> lista.append(-3)
+>>> lista.append(-15)
+>>> lista.print_sorted()
+[-20, -15, -10, -3]
