@@ -22,8 +22,8 @@ The "1-my_list" module
 [-20, -15, -10, -3]
 
 
-lst = MyList()
-lst.print_sorted()
+>>> lst = MyList()
+>>> lst.print_sorted()
 []
 
 
