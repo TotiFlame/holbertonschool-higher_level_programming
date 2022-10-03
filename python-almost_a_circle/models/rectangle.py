@@ -109,3 +109,6 @@ class Rectangle(Base):
                 self.y = value
             else:
                 return
+
+    def to_dictionary(self):
+        return self.__dict__
