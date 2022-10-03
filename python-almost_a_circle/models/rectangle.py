@@ -111,4 +111,5 @@ class Rectangle(Base):
                 return
 
     def to_dictionary(self):
+        """ dict """
         return self.__dict__
