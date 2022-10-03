@@ -80,18 +80,32 @@ class Rectangle(Base):
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "
                 f"{self.__width}/{self.__height}")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ update """
-        for i in range(len(args)):
-            if i == 0:
-                self.id = args[0]
-            elif i == 1:
-                self.width = args[1]
-            elif i == 2:
-                self.height = args[2]
-            elif i == 3:
-                self.x = args[3]
-            elif i == 4:
-                self.y = args[4]
+        if len(args) != 0:
+            for i in range(len(args)):
+                if i == 0:
+                    self.id = args[0]
+                elif i == 1:
+                    self.width = args[1]
+                elif i == 2:
+                    self.height = args[2]
+                elif i == 3:
+                    self.x = args[3]
+                elif i == 4:
+                    self.y = args[4]
+                else:
+                    return
+        for key, value in kwargs.items():
+            if key == "id":
+                self.id = value
+            elif key == "width":
+                self.width = value
+            elif key == "height":
+                self.height = value
+            elif key == "x":
+                self.x = value
+            elif key == "y":
+                self.y = value
             else:
-                break
+                return
