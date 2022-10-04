@@ -47,4 +47,6 @@ class Base():
     def from_json_string(json_string):
         if not json_string:
             return []
-        return json_string
+        if json_string == []:
+            return []
+        return list(json_string)
