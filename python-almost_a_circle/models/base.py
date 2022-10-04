@@ -47,4 +47,4 @@ class Base():
     def from_json_string(json_string):
         if not json_string:
             return []
-        return str(json_string)
+        return json_string
