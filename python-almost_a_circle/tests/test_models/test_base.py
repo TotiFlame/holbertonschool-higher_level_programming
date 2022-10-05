@@ -18,5 +18,17 @@ class BaseClass(unittest.TestCase):
         result2 = Base()
         self.assertEqual(result.id, 2)
 
-    if __name__ == '__main__':
-        unittest.main()
+    def test_id_exists(self):
+        result = Base(2)
+        self.assertEqual(result.id, 2)
+
+    def test_to_json_none(self):
+        result = Base.to_json_string(None)
+        self.assertEqual(result, '[]')
+
+    def test_to_json_brackets(self):
+        result = Base.to_json_string(None)
+        self.assertEqual(result, '[]')
+
+if __name__ == '__main__':
+    unittest.main()
