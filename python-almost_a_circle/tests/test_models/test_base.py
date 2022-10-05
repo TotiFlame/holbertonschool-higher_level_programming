@@ -39,6 +39,5 @@ class BaseClass(unittest.TestCase):
         result = Base.from_json_string("[]")
         self.assertEqual(result, [])
 
-
 if __name__ == '__main__':
     unittest.main()
