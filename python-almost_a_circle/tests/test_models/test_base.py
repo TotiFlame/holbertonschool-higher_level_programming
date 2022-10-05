@@ -3,6 +3,7 @@
 import unittest
 from models.base import Base
 
+
 class BaseClass(unittest.TestCase):
     """ Base class """
     def test_negative_id(self):
@@ -29,6 +30,15 @@ class BaseClass(unittest.TestCase):
     def test_to_json_brackets(self):
         result = Base.to_json_string(None)
         self.assertEqual(result, '[]')
+
+    def test_from_json_none(self):
+        result = Base.from_json_string(None)
+        self.assertEqual(result, [])
+
+    def test_from_json_brackets(self):
+        result = Base.from_json_string("[]")
+        self.assertEqual(result, [])
+
 
 if __name__ == '__main__':
     unittest.main()
