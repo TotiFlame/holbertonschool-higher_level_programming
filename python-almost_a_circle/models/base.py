@@ -70,7 +70,7 @@ class Base():
     def load_from_file(cls):
         file_name = cls.__name__ + ".json"
         ins_list = []
-        if os.path.exists(file_name):
+        if not os.path.exists(file_name):
             return []
         with open(file_name, "r") as file:
             current = cls.from_json_string(file.read())
