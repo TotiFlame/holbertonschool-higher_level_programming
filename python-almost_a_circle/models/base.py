@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ base """
 import json
-import os
+import os.path
 
 
 class Base():
@@ -45,15 +45,35 @@ class Base():
 
     @staticmethod
     def from_json_string(json_string):
+        """
+        If the string is empty, return an empty list,
+        otherwise return the list of the string.
+        """
         if not json_string:
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
+        """
+        Create a dummy instance of the class,
+        update it with the dictionary, and return it.
+        """
         if cls.__name__ == "Rectangle":
             dummy = cls(5, 5)
         else:
             dummy = cls(5)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        file_name = cls.__name__ + ".json"
+        ins_list = []
+        if os.path.exists(file_name):
+            return []
+        with open(file_name, "r") as file:
+            current = cls.from_json_string(file.read())
+            for i in current:
+                ins_list.append(cls.create(**i))
+        return ins_list
