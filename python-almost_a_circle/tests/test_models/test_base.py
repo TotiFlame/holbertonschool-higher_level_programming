@@ -1,19 +1,19 @@
 #!/usr/bin/python3
-""" Tests """
+""" base tests """
 import unittest
-from models.base import Base, base
+from models.base import Base
 
 class BaseClass(unittest.TestCase):
     """ Base class """
-    def negative_id(self):
+    def test_negative_id(self):
         result = Base(-12)
-        self.assertEqual(result, -12)
+        self.assertEqual(result.id, -12)
 
-    def auto_assign(self):
+    def test_auto_assign(self):
         result = Base()
         self.assertEqual(result.id, 1)
 
-    def one_to_auto_assign(self):
+    def test_one_to_auto_assign(self):
         result = Base()
         result2 = Base()
         self.assertEqual(result.id, 2)
