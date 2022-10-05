@@ -9,5 +9,14 @@ class BaseClass(unittest.TestCase):
         result = Base(-12)
         self.assertEqual(result, -12)
 
+    def auto_assign(self):
+        result = Base()
+        self.assertEqual(result.id, 1)
+
+    def one_to_auto_assign(self):
+        result = Base()
+        result2 = Base()
+        self.assertEqual(result.id, 2)
+
     if __name__ == '__main__':
         unittest.main()
