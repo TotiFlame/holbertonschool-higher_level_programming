@@ -1,9 +1,9 @@
 #!/usr/bin/node
 
-const fvar = 'C is fun';
-const svar = 'Python is cool';
-const tvar = 'JavaScript is amazing';
+const first = 'C is fun';
+const second = 'Python is cool';
+const third = 'JavaScript is amazing';
 
-console.log(fvar);
-console.log(svar);
-console.log(tvar);
+console.log(first);
+console.log(second);
+console.log(third);
