@@ -10,10 +10,10 @@ module.exports = class Square extends Ssquare {
 
   charPrint (c = 'X') {
     let s = c;
-    for (let i = 0; i < this.size; i++) {
+    for (let i = 0; i <= this.size; i++) {
       s += c;
     }
-    for (let i = 0; i < this.size; i++) {
+    for (let i = 0; i <= this.size; i++) {
       console.log(s);
     }
   }
