@@ -3,17 +3,12 @@
 const Ssquare = require('./5-square');
 
 module.exports = class Square extends Ssquare {
-  constructor (x, size) {
-    super(x, x, size, size);
-    this.size = x;
-  }
-
   charPrint (c = 'X') {
     let s = '';
-    for (let i = 0; i < this.size; i++) {
+    for (let i = 0; i < this.height; i++) {
       s += c;
     }
-    for (let i = 0; i < this.size; i++) {
+    for (let i = 0; i < this.height; i++) {
       console.log(s);
     }
   }
