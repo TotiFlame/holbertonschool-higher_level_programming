@@ -9,7 +9,7 @@ module.exports = class Square extends Ssquare {
   }
 
   charPrint (c = 'X') {
-    let s = c;
+    let s = '';
     for (let i = 0; i <= this.size; i++) {
       s += c;
     }
