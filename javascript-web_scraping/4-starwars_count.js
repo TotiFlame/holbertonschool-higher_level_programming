@@ -1,6 +1,7 @@
 #!/usr/bin/node
 const request = require('request');
 
+<<<<<<< HEAD
 const url = process.argv[2];
 
 request.get(url, (error, response, body) => {
@@ -20,4 +21,14 @@ request.get(url, (error, response, body) => {
     }
   }
   console.log(counter);
+=======
+const url = proccess.argv[1];
+
+request(url, (error, response, body) => {
+  if (error) {
+    console.error(error);
+    return;
+  }
+  console.log(body);
+>>>>>>> 9c951a2488b4fc023df394cc11cd632fa3ccba45
 });
